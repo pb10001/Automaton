@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("Automaton")]
+[assembly: AssemblyTitle("Automaton.CLI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("pb10001")]
-[assembly: AssemblyProduct("Automaton")]
+[assembly: AssemblyProduct("Automaton.CLI")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
-[assembly: Guid("a716602f-b579-49bc-b818-a6d541cecdf7")]
+[assembly: Guid("b08b4ef7-da3e-4058-8776-aa183ebec9a5")]
 
 // アセンブリのバージョン情報は次の 4 つの値で構成されています:
 //

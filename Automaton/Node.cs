@@ -18,7 +18,7 @@ namespace Automaton
             ID = node.ID;
             Value = node.Value;
         }
-        static int count = 0;
+        private static int count = 0;
         public int ID { get; private set; }
         public double Value { get; set; }
         public static Node NewNode(double initValue)

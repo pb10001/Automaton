@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Automaton.Core;
 
-namespace Automaton
+namespace Automaton.CLI
 {
     class Program
     {
@@ -32,7 +33,7 @@ namespace Automaton
                 int count = 0;
                 foreach (var item in result)
                 {
-                    writer.Write("{0},",count++);
+                    writer.Write("{0},", count++);
                     writer.WriteLine(string.Join(",", item.CurrentState()));
                 }
             }
