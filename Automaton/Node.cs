@@ -8,7 +8,10 @@ namespace Automaton
 {
     public class Node
     {
-        public Node() { }
+        /// <summary>
+        /// privateコンストラクタ
+        /// </summary>
+        private Node() { }
         /// <summary>
         /// コピーコンストラクタ
         /// </summary>
