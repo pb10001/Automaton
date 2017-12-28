@@ -15,8 +15,8 @@ namespace Automaton.Core
         /// <param name="link"></param>
         public Link(Link link)
         {
-            From = new Node(link.From);
-            To = new Node(link.To);
+            From = link.From;
+            To = link.To;
             Weight = link.Weight;
         }
         public Node From { get; set; }

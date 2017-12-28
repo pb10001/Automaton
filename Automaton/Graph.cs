@@ -21,11 +21,16 @@ namespace Automaton.Core
         {
             using (var reader = new System.IO.StreamReader(path, Encoding.GetEncoding("shift_jis")))
             {
+                double tmp;
                 var nodes = reader.ReadLine().Split(',');
                 foreach (var item in nodes)
                 {
-                    var n = Node.NewNode(double.Parse(item));
-                    nodeList.Add(n);
+                    if (double.TryParse(item, out tmp))
+                    {
+                        var n = Node.NewNode(tmp);
+                        nodeList.Add(n);
+
+                    }
                 }
                 while (reader.Peek() > -1)
                 {
