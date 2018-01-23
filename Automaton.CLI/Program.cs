@@ -12,7 +12,7 @@ namespace Automaton.CLI
         static void Main(string[] args)
         {
             //有限オートマトン
-            List<Graph> result = new List<Graph>();
+            List<double[]> result = new List<double[]>();
             Console.Write("Path of input file: ");
             var path = Console.ReadLine();
             var automaton = new Graph(path);
@@ -23,11 +23,12 @@ namespace Automaton.CLI
             for (int i = 0; i <= generation; i++)
             {
                 Console.WriteLine("Gen: {0}", i);
-                foreach (var item in automaton.CurrentState())
+                var current = automaton.CurrentState();
+                foreach (var item in current)
                 {
                     Console.WriteLine(item);
                 }
-                result.Add(new Graph(automaton));
+                result.Add(current.ToArray());
                 automaton = automaton.SimulateOneStep();
             }
             using (var writer = new System.IO.StreamWriter(path))
@@ -36,7 +37,7 @@ namespace Automaton.CLI
                 foreach (var item in result)
                 {
                     writer.Write("{0},", count++);
-                    writer.WriteLine(string.Join(",", item.CurrentState()));
+                    writer.WriteLine(string.Join(",", item));
                 }
             }
         }
